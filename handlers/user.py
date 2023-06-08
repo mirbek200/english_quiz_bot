@@ -53,7 +53,7 @@ async def show_poll(message: types.Message, state: FSMContext):
     else:
         async with state.proxy() as data:
             result = data['result']
-        await bot.send_message(message.from_user.id, f"Опрос завершен. {result}")
+        await bot.send_message(message.from_user.id, f"Опрос завершен. {result} ")
         await state.finish()
 
 
